@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">搞事情</string>
+    <string name="action_settings">关于</string>
+    <string name="start">既然你诚心诚意的发问了，\n
+                         我们就大发慈悲告诉你，\n
+                         为了防止脑壳的空洞，\n
+                         为了维护个人的利益，\n
+                         贯彻爱与真是的邪恶\n
+                         可爱又迷人的反派角色?\n
+                         我们是穿梭在KU Market的小分队，\n
+                         事情，一大堆事情在等着我们，\n
+                         就是这样，……喵。
+    </string>
+    <string name="about">首先呢，你要明白今天安排的事情必须今天做完，不能推到明天
+    所以我们更期望约束自己，提醒自己，一个简单的Todo列表，我的目的是为了解决自己的拖延的毛病
+        如果你完成了，那么最好，如果完不成，那，对不起，你的Todo列表将会被删库，并且会获得一枚滑稽币，
+        Wannacry？你大可修改SharedPreferences实现修改滑稽币数量，不过那又有什么用呢？
+    </string>
+</resources>
