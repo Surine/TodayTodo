@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.surine.todaytodo.AddActivity">
+    <include layout="@layout/toolbar"/>
+    <EditText
+        android:id="@+id/add"
+        android:focusable="true"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:maxLines="10"
+        android:gravity="start"
+        android:padding="15dp"
+        android:background="@null"
+        android:hint="好好安排生活中的琐碎。"
+        android:layout_alignParentStart="true"/>
+</RelativeLayout>

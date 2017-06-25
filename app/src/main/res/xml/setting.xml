@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+   <PreferenceCategory
+       android:title="首页模式"
+       >
+       <CheckBoxPreference
+           android:key="muti_view"
+           android:title="多列布局"
+           android:summary="确认使用多列布局"
+           />
+   </PreferenceCategory>
+    <PreferenceCategory
+        android:title="关于"
+        >
+      <Preference
+          android:key="about"
+          android:title="关于APP"
+          />
+    </PreferenceCategory>
+</PreferenceScreen>

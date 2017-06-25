@@ -1,0 +1,14 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_action_shortcut_plus"
+        android:shortcutDisabledMessage="@string/add"
+        android:shortcutId="static"
+        android:shortcutLongLabel="@string/add"
+        android:shortcutShortLabel="@string/add">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.surine.todaytodo.ShortActivity"
+            android:targetPackage="com.surine.todaytodo" />
+    </shortcut>
+</shortcuts>

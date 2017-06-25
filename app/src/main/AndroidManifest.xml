@@ -3,21 +3,58 @@
           package="com.surine.todaytodo">
 
     <application
+        android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name="org.litepal.LitePalApplication"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity>
+
+        <!-- 来自：http://www.cnblogs.com/skywang12345/p/3264991.html Thanks to author -->
+        <receiver
+            android:name=".widget.WidgetProvider"
+            android:label="今日需搞">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.widget.surine.WidgetProvider.MY_UPDATA_CHANGE"/>
+                <!-- 接收点击列表的响应事件 -->
+                <action android:name="com.surine.todaytodo.COLLECTION_VIEW_ACTION"/>
+                <!-- 接收点击按钮_的响应事件 -->
+                <action android:name="com.surine.todaytodo.BT_REFRESH_ACTION"/>
+                <action android:name="com.surine.todaytodo.UPDATE_ALL"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_info"/>
+        </receiver>
+
+        <service
+            android:name=".widget.WidgetService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+
+        <activity android:name=".AddActivity">
+        </activity>
+        <activity android:name=".SettingActivity">
+        </activity>
+        <activity android:name=".AboutActivity">
+        </activity>
+        <activity android:name=".ShortActivity"
+            >
         </activity>
     </application>
 
